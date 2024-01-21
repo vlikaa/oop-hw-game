@@ -15,6 +15,7 @@ int main()
 
 
 	game1();
+
 }
 
 void game1() {
@@ -31,8 +32,7 @@ void game1() {
 			break;
 		}
 
-
-		else if (isWin(word, userWord)) {
+		else if (!word.compare(userWord)) {
 			cout << "\n\tYou win\n";
 			break;
 		}
