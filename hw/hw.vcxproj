@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FRead.cpp" />
+    <ClCompile Include="GameRule.cpp" />
     <ClCompile Include="hw.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FRead.h" />
     <ClInclude Include="functions.h" />
+    <ClInclude Include="GameRule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

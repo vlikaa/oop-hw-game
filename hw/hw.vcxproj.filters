@@ -18,9 +18,21 @@
     <ClCompile Include="hw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FRead.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FRead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

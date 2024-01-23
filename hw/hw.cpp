@@ -1,20 +1,48 @@
 
 
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "functions.h"
 
 using namespace std;
 
 void game1();
 
-
+void game2();
 
 int main()
 {
 
+	/*ofstream fout;
+	fout.open("file.txt", std::ios::app);
+
+	if (fout.is_open()) {
+		fout << "man\n";
+	}
+
+	fout.close();*/
+
+	ifstream fin;
+	string str;
+	fin.open("file.txt");
+
+	if (fin.is_open()) {
+		for (int i = 0; i < 3; i++)
+		{
+			getline(fin, str);
+			if (i == 1) {
+				break;
+			}
+		}
+	}
+	cout << str << endl;
+
+	fin.close();
 
 
-	game1();
+
+	//game1();
 
 }
 
@@ -52,4 +80,14 @@ void game1() {
 
 
 
+}
+
+void game2() {
+
+
+
+	while (true)
+	{
+
+	}
 }
