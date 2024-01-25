@@ -2,8 +2,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <conio.h>
 #include <string>
 #include "functions.h"
+#include "GameRule.h"
 
 using namespace std;
 
@@ -23,26 +25,8 @@ int main()
 
 	fout.close();*/
 
-	ifstream fin;
-	string str;
-	fin.open("file.txt");
 
-	if (fin.is_open()) {
-		for (int i = 0; i < 3; i++)
-		{
-			getline(fin, str);
-			if (i == 1) {
-				break;
-			}
-		}
-	}
-	cout << str << endl;
-
-	fin.close();
-
-
-
-	//game1();
+	game2();
 
 }
 
@@ -85,9 +69,22 @@ void game1() {
 void game2() {
 
 
+	GameRule game;
+	char symbol;
 
+	game.generateWord();
+	
 	while (true)
 	{
+		if (game.IsWin()) {
+			cout << "\n\tYou won\n";
+			break;
+		}
+		system("cls");
+		game.showWord();
+		cout << "\nEnter symbol: ";
+		symbol = _getch();
+		game.enterSymbol(symbol);
 
 	}
 }

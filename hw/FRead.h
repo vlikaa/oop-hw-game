@@ -1,9 +1,13 @@
 #pragma once
 
+#include <iostream>
+#include <string>
 #include <fstream>
 
 class FRead
 {
-	std::ifstream fin;
+public:
+	std::string readWord(const char* file, const int index, const int words);
+
 };
 

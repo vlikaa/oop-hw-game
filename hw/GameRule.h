@@ -1,15 +1,27 @@
 #pragma once
 
 #include <iostream>
+#include "FRead.h"
+#include "Random.h"
+
 
 class GameRule
 {
 public:
-	std::string& generateWord();
-	bool checkSymbol(const char symbol);
+	GameRule();
+
+	void generateWord();
+	void enterSymbol(const char symbol);
 	void showWord();
+	bool IsWin();
 
 private:
-	std::string = generateWord();
+	int size;
+	int attempts;
+	std::string word;
+	std::string letterStorage;
+
+	bool IsGenerate();
+	bool checkSymbol(const char symbol, const std::string& str);
 };
 
