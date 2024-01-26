@@ -13,12 +13,13 @@ std::string FRead::readWord(const char* file, const int index, const int words) 
 				break;
 			}
 		}
+		fin.close();
 	}
 	else {
 		std::cout << "\n\tFile not found!\n";
 	}
 
-	fin.close();
+	
 	return str;
 }
 

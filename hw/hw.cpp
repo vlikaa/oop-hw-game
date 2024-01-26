@@ -16,14 +16,8 @@ void game2();
 int main()
 {
 
-	/*ofstream fout;
-	fout.open("file.txt", std::ios::app);
 
-	if (fout.is_open()) {
-		fout << "man\n";
-	}
-
-	fout.close();*/
+	//game1();
 
 
 	game2();
@@ -76,12 +70,14 @@ void game2() {
 	
 	while (true)
 	{
-		if (game.IsWin()) {
-			cout << "\n\tYou won\n";
-			break;
-		}
+
 		system("cls");
 		game.showWord();
+		if (game.IsWin()) {
+			cout << "\n\tYou won" 
+				<< "\n\tAttempts: " << game.getAttempts() << '\n';
+			break;
+		}
 		cout << "\nEnter symbol: ";
 		symbol = _getch();
 		game.enterSymbol(symbol);

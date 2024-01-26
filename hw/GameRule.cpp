@@ -3,13 +3,14 @@
 GameRule::GameRule()
 	: size(), attempts() {}
 
+
 void GameRule::generateWord() {
 	FRead fin;
-	Random rand;
-	
+	Random random;
+	int wordsCount{ 8 };
+	int randIndex = random(0, wordsCount);
 
-
-	word = fin.readWord("wordLibrary.txt", 3, 1);
+	word = fin.readWord("wordLibrary.txt", randIndex, wordsCount);
 	size = word.size();
 }
 
@@ -61,4 +62,8 @@ bool GameRule::IsGenerate() {
 		return false;
 	}
 	return true;
+}
+
+int GameRule::getAttempts() {
+	return attempts;
 }

@@ -14,6 +14,7 @@ public:
 	void enterSymbol(const char symbol);
 	void showWord();
 	bool IsWin();
+	int getAttempts();
 
 private:
 	int size;
