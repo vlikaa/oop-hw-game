@@ -11,11 +11,13 @@ void GameRule::generateWord() {
 	int randIndex = random(0, wordsCount);
 
 	word = fin.readWord("wordLibrary.txt", randIndex, wordsCount);
+	strLwr();
 	size = word.size();
 }
 
-void GameRule::enterSymbol(const char symbol) {
+void GameRule::enterSymbol(char symbol) {
 	if (IsGenerate()) {
+		strLwr(symbol);
 		if (!checkSymbol(symbol, letterStorage)) {
 			letterStorage += symbol;
 			++attempts;
@@ -27,6 +29,20 @@ void GameRule::enterSymbol(const char symbol) {
 			<< "' has already been entered,\n\ttry another letter.\n\n";
 		system("pause");
 	}
+}
+
+// strLwr: for std::string
+void GameRule::strLwr() {
+	for (int i = 0; i < word.size(); i++) {
+		if (word[i] >= 'A' && word[i] <= 'Z')
+			word[i] += 32;
+	}
+}
+
+// strLwr: for char
+void GameRule::strLwr(char &str) {
+	if (str >= 'A' && str <= 'Z')
+		str += 32;
 }
 
 bool GameRule::checkSymbol(const char symbol, const std::string& str) {

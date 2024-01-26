@@ -134,7 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FRead.h" />
-    <ClInclude Include="functions.h" />
     <ClInclude Include="GameRule.h" />
     <ClInclude Include="Random.h" />
   </ItemGroup>

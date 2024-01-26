@@ -4,7 +4,6 @@
 #include <fstream>
 #include <conio.h>
 #include <string>
-#include "functions.h"
 #include "GameRule.h"
 
 using namespace std;
@@ -21,7 +20,6 @@ int main()
 
 
 	game2();
-
 }
 
 void game1() {

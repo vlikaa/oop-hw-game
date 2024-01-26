@@ -1,8 +1,8 @@
-apple
-banana
-car
-mercedes
-tohiba
+Apple
+incomprehensibilities 
+toshiba
 tree
+polymorphism
+pseudopseudohypoparathyroidism
 mouse
 phone

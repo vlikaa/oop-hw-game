@@ -11,9 +11,10 @@ public:
 	GameRule();
 
 	void generateWord();
-	void enterSymbol(const char symbol);
+	void enterSymbol(char symbol);
 	void showWord();
 	bool IsWin();
+
 	int getAttempts();
 
 private:
@@ -24,5 +25,7 @@ private:
 
 	bool IsGenerate();
 	bool checkSymbol(const char symbol, const std::string& str);
+	void strLwr();
+	void strLwr(char &str);
 };
 
